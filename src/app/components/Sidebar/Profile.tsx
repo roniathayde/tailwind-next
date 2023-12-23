@@ -2,7 +2,7 @@ import { LogOut } from 'lucide-react'
 
 export function Profile() {
   return (
-    <div className="grid-cols-profile grid items-center gap-3">
+    <div className="grid grid-cols-profile items-center gap-3">
       <img
         src="https://github.com/roniathayde.png"
         className="h-10 w-10 rounded-full"
@@ -14,7 +14,7 @@ export function Profile() {
           Roni Athayde
         </span>
         <span className="truncate text-sm text-zinc-500">
-          tpontes014@gmail.com
+          pontes014@gmail.com
         </span>
       </div>
       <button
