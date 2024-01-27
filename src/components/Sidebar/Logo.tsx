@@ -1,4 +1,11 @@
+import { useContext } from "react"
+import { ThemeContext } from '@/app/Boilerplate'
+import { Button } from "../Button"
+import { ToggleLeft, ToggleRight } from "lucide-react"
+
 export function Logo() {
+  const { theme, changeTheme} = useContext(ThemeContext)
+  
   return (
     <strong className="mx-1 flex items-center gap-2 text-xl font-semibold text-zinc-900 dark:text-zinc-100">
       <svg
@@ -204,6 +211,9 @@ export function Logo() {
         </defs>
       </svg>
       <span className="">Untitled UI</span>
+      <Button variant="ghost" onClick={()=>changeTheme()  } className="ml-2">
+        { theme === 'dark' ? <ToggleLeft />: <ToggleRight /> }
+      </Button >
     </strong>
   )
 }
